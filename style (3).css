@@ -1,0 +1,101 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f7fa;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  background-color: #4b7bec;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+main {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+}
+
+form textarea, form select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #4b7bec;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  margin-top: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  backgorund-color: #3867d6;
+}
+
+.entry {
+  padding: 15px;
+  border-left: 4px solid #4b7bec;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+}
+
+.entry[data-mood="😊"] {
+  border-color: #00b894;
+}
+
+.entry[data-mood="😞"] {
+  border-color: #d63031;
+}
+
+.entry[data-mood="😠"] {
+  border-color: #e17055;
+}
+
+.entry[data-mood="😌"] {
+  border-color: #74b9ff;
+}
+
+.entry small {
+  color: #888;
+}
+
+body.dark-mode {
+  background-color: #1e272e;
+  color: #f1f2f6;
+}
+
+body.dark-mode main {
+  background-color: #2f3542;
+  color: #f1f2f6;
+}
+
+body.dark-mode header {
+  background-color: #485460;
+}
+
+body.dark-mode .entry {
+  background-color: #353b48;
+  border-color: #70a1ff;
+}
+
+button {
+  transition: background-color 0.3s;
+}

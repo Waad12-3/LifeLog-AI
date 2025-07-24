@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block content %}
+  <h2>Past Entries</h2>
+  <form method="GET">
+    <input type="text" name="q" placeholder="Search..." value="{{ search_query or '' }}">
+    <select name="mood">
+      <option value="">All Moods</option>
+      <option value="😊" {% if mood_filter == "😊" %}selected{% endif %}>😊 Happy</option>
+      <option value="😞" {% if mood_filter == "😞" %}selected{% endif %}>😞 Sad</option>
+      <option value="😠" {% if mood_filter == "😠" %}selected{% endif %}>😠 Angry</option>
+      <option value="😌" {% if mood_filter == "😌" %}selected{% endif %}>😌 Calm</option>
+    </select>
+    <button type="submit">Filter</button>
+  </form>
+
+  {% for entry in entries %}
+    <div class="entry" data-mood="{{ entry.mood }}">
+      <p>{{ entry.content }}</p>
+      <small>{{ entry.mood }} - {{ entry.date.strftime('%Y-%m-%d %H:%M') }}</small>
+      <hr>
+    </div>
+  {% else %}
+    <p>No entries yet!</p>
+  {% endfor %}
+  <script>
+    if (performance.navigation.type === 1) {
+      window.location.href = "/";
+    }
+  </script>
+{% endblock %}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>LifeLog AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <header>
+      <h1><a href="/">LifeLog AI</a></h1>
+      <button id="darkModeToggle">🌓 Toggle Dark Mode</button>
+    </header>
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</script>
+  </body>
+</html>

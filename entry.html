@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block content %}
+  <h2>Write New Entry</h2>
+  <form method="POST">
+    <label for="mood">Mood:</label>
+    <select name="mood" id="mood">
+      <option value="😊">😊 Happy</option>
+      <option value="😞">😞 Sad</option>
+      <option value="😠">😠 Angry</option>
+      <option value="😌">😌 Calm</option>
+    </select><br><br>
+
+    <label for="content">What's on your mind?</label><br>
+    <textarea name="content" rows="6" cols="40" required></textarea><br><br>
+
+    <button type="submit">Save Entry</button>
+  </form>
+  <script>
+    if (performance.navigation.type === 1) {
+      window.location.href = "/";
+    }
+  </script>
+{% endblock %}
