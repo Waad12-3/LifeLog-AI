@@ -31,7 +31,5 @@ Click to download your journal
 - ✅ Full App (Flask + SQLite): [Hosted on Replite](https://replit.com/@waadhomedi77/LifeLog-AI)
 - 🌐 Frontend (static only): [Netlify Demo](https://app.netlify.com/projects/lifelog-ai/overview)
 
----
-
 
 ---
